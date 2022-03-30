@@ -78,6 +78,11 @@ form button:hover {
 }
 .todo-item {
   padding: 0rem 0.5rem;
+  &-container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .fa-trash,

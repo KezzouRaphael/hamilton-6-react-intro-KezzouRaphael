@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hamilton-6-react-intro-KezzouRaphael/intro-react/static/css/main.f890aa8d.css",
-    "main.js": "/hamilton-6-react-intro-KezzouRaphael/intro-react/static/js/main.53b55f46.js",
-    "index.html": "/hamilton-6-react-intro-KezzouRaphael/intro-react/index.html",
-    "main.f890aa8d.css.map": "/hamilton-6-react-intro-KezzouRaphael/intro-react/static/css/main.f890aa8d.css.map",
-    "main.53b55f46.js.map": "/hamilton-6-react-intro-KezzouRaphael/intro-react/static/js/main.53b55f46.js.map"
+    "main.css": "/hamilton-6-react-intro-KezzouRaphael/static/css/main.f890aa8d.css",
+    "main.js": "/hamilton-6-react-intro-KezzouRaphael/static/js/main.8e1de717.js",
+    "index.html": "/hamilton-6-react-intro-KezzouRaphael/index.html",
+    "main.f890aa8d.css.map": "/hamilton-6-react-intro-KezzouRaphael/static/css/main.f890aa8d.css.map",
+    "main.8e1de717.js.map": "/hamilton-6-react-intro-KezzouRaphael/static/js/main.8e1de717.js.map"
   },
   "entrypoints": [
     "static/css/main.f890aa8d.css",
-    "static/js/main.53b55f46.js"
+    "static/js/main.8e1de717.js"
   ]
 }

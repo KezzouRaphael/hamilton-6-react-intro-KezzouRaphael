@@ -11,7 +11,7 @@ function App() {
 
   useEffect(()=>{
     const storedTodos =JSON.parse(localStorage.getItem("todos"));
-    console.log(storedTodos);
+    //console.log(storedTodos);
     if(storedTodos)
       setTodos(storedTodos);
   },[]);

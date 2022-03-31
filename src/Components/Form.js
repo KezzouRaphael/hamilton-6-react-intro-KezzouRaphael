@@ -14,7 +14,7 @@ const Form = ({inputText,todos,setTodos,setInputText,setStatus})=>{
   const deleteTodoHandler = (e) =>{
     e.preventDefault();
     let newTodos =[...todos];
-    let newTodosFilter = newTodos.filter(todo => todo.completed == false);
+    let newTodosFilter = newTodos.filter(todo => todo.completed === false);
     setTodos(newTodosFilter);
   };
   const statusHandler = (e) =>{

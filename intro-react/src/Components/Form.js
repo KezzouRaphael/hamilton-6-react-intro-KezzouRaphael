@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from 'uuid';
-const Form = ({inputText,todos,setTodos,setInputText})=>{
+const Form = ({inputText,todos,setTodos,setInputText,setStatus})=>{
   const inputTextHandler = (e)=>{
     setInputText(e.target.value);
   };
@@ -15,8 +15,11 @@ const Form = ({inputText,todos,setTodos,setInputText})=>{
     e.preventDefault();
     let newTodos =[...todos];
     let newTodosFilter = newTodos.filter(todo => todo.completed == false);
-    console.log(newTodosFilter);
     setTodos(newTodosFilter);
+  };
+  const statusHandler = (e) =>{
+    setStatus(e.target.value);
+    console.log(e.target.value);
   };
   return(
     <form>
@@ -26,7 +29,7 @@ const Form = ({inputText,todos,setTodos,setInputText})=>{
     </button>    
     <button onClick={deleteTodoHandler} className="todo-button" type="delete">Clear</button>
     <div className="select">
-      <select name="todos" className="filter-todo">
+      <select onChange={statusHandler} name="todos" className="filter-todo">
         <option value="all">All</option>
         <option value="completed">Completed</option>
         <option value="uncompleted">Uncompleted</option>

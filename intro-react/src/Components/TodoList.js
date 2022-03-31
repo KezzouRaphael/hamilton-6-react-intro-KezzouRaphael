@@ -1,6 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
-const TodoList = ({todos,setTodos})=>{
+const TodoList = ({todos,setTodos,filteredTodos})=>{
   return(
     <>
       <div className = 'todo-container'>
@@ -12,7 +12,7 @@ const TodoList = ({todos,setTodos})=>{
             </div>
           </li>
           <hr/>
-          {todos.map(todo => (
+          {filteredTodos.map(todo => (
             <li key = {todo.id} >
               <Todo todo={todo} todos={todos} setTodos={setTodos} /> 
             </li>

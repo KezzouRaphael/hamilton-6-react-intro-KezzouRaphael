@@ -19,7 +19,7 @@ const TodoList = ({todos,setTodos,filteredTodos})=>{
           ))}
         </ul>
       </div>
-      <p className="todo-counter">{todos.length} Tasks left</p>
+      <p className="todo-counter">{filteredTodos.length} Tasks</p>
     </>
   );
 };

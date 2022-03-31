@@ -1,6 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
-const TodoList = ({todos,setTodos,filteredTodos})=>{
+const TodoList = ({todos,setTodos,filteredTodos,checked,setChecked})=>{
   return(
     <>
       <div className = 'todo-container'>
@@ -14,7 +14,7 @@ const TodoList = ({todos,setTodos,filteredTodos})=>{
           <hr/>
           {filteredTodos.map(todo => (
             <li key = {todo.id} >
-              <Todo todo={todo} todos={todos} setTodos={setTodos} /> 
+              <Todo todo={todo} todos={todos} setTodos={setTodos}/> 
             </li>
           ))}
         </ul>

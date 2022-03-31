@@ -2,22 +2,25 @@ import React from 'react';
 import Todo from './Todo';
 const TodoList = ({todos,setTodos})=>{
   return(
-    <div className = 'todo-container'>
-      <ul className = 'todo-list'>
-        <li>
-          <div className="todo-item-container">
-            <p>Done?</p>
-            <p> Task </p> 
-          </div>
-        </li>
-        <hr/>
-        {todos.map(todo => (
-          <li key = {todo.id}>
-            <Todo text = {todo.text} completed = {todo.completed}/> 
+    <>
+      <div className = 'todo-container'>
+        <ul className = 'todo-list'>
+          <li>
+            <div className="todo-item-container">
+              <p>Done?</p>
+              <p> Task </p> 
+            </div>
           </li>
-        ))}
-      </ul>
-    </div>
+          <hr/>
+          {todos.map(todo => (
+            <li key = {todo.id} >
+              <Todo todo={todo} todos={todos} setTodos={setTodos} /> 
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p className="todo-counter">{todos.length} Tasks left</p>
+    </>
   );
 };
 export default TodoList;

@@ -36,17 +36,6 @@ form button:hover {
   background: #ff6f47;
   color: white;
 }
-.todo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.todo-list {
-  min-width: 30%;
-  list-style: none;
-}
-
 .todo {
   margin: 0.5rem;
   background: white;
@@ -56,6 +45,26 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  &-counter {
+    text-align: center;
+  }
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-list {
+    min-width: 30%;
+    list-style: none;
+  }
+  &-item {
+    padding: 0rem 0.5rem;
+    &-container {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 .filter-todo {
   padding: 1rem;
@@ -76,20 +85,6 @@ form button:hover {
 .complete-btn {
   background: rgb(11, 212, 162);
 }
-.todo-item {
-  padding: 0rem 0.5rem;
-  &-container {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.fa-trash,
-.fa-check {
-  pointer-events: none;
-}
-
 .fall {
   transform: translateY(10rem) rotateZ(20deg);
   opacity: 0;

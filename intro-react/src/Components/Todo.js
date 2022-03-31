@@ -1,16 +1,16 @@
 import React,{useState} from 'react';
 
-const Todo = ({text,completed})=>{
-  const [checked,setChecked] = useState(completed);
+const Todo = ({todo,setTodos,todos})=>{
+  const [checked,setChecked] = useState(false);
   const todoClickHandler = (e)=>{
     setChecked(!checked);
-    completed = checked;
-    console.log(completed);
+    let match = todos.find(todoP => todoP.id === todo.id);
+    match.completed = !checked;
   };
   return(
-    <div className="todo-item-container">
+    <div className={`todo-item-container ${todo.completed ? "completed" : ""} `}>
       <input type = "checkbox" checked = {checked} onChange = {todoClickHandler}/>
-      <p> {text} </p> 
+      <p> {todo.text} </p> 
     </div>
   );
 };

@@ -37,13 +37,17 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }
   return (
+    <>
+    <header>
+        <h1>todos</h1>
+    </header>
     <div className="App">
-      <header>
-        <h1>To Do list</h1>
-      </header>
+      <hr/>
       <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText = {setInputText} setStatus={setStatus}/>
-      <TodoList filteredTodos={filteredTodos} todos={todos} setTodos={setTodos} />
+      <hr/>
+      <TodoList filteredTodos={filteredTodos} todos={todos} setTodos={setTodos} status={status} setStatus={setStatus}/> 
     </div>
+    </>
   );
 }
 

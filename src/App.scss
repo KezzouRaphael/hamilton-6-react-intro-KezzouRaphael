@@ -10,8 +10,33 @@ h1{
   font-weight: 100;
   opacity: 0.3;
 }
-input {
+input[type="checkbox"]{
   accent-color: rgba(180, 12, 158, 0.836);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: lightgray;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid lightgray;
+  border-radius: 0.5rem;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  border-radius: 0.5rem;
+  box-shadow: inset 1em 1em rgba(180, 12, 158, 0.836);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 .App{
   background-color:white;
@@ -68,7 +93,9 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
   &-counter {
-    text-align: center;
+    place-self: center left;
+    padding: 1rem;
+    opacity: 0.5;
   }
   &-container {
     width: -moz-available;
@@ -87,7 +114,10 @@ form button:hover {
     }
   }
 }
-
+.select{
+  place-self: center right;
+  padding: 1rem;
+}
 .todo li {
   flex: 1;
 }
@@ -126,8 +156,6 @@ form button:hover {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2,1fr);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 // /* Arrow */
 // .select::after {

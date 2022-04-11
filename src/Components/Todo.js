@@ -31,7 +31,7 @@ const Todo = ({todo,setTodos,todos,status,setFilteredTodos})=>{
   return(
     <div className={`todo-item-container ${todo.completed ? "completed" : ""} `}>
       <input type = "checkbox" checked = {todo.completed} onChange = {todoClickHandler}/>
-      <p> {todo.text} </p> 
+      <p > {todo.text} </p> 
     </div>
   );
 };

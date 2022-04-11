@@ -1,6 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
-const TodoList = ({todos,setTodos,filteredTodos,status,setStatus})=>{
+const TodoList = ({todos,setTodos,filteredTodos,setFilteredTodos,status,setStatus})=>{
   const statusHandler = (e) =>{
     setStatus(e.target.value);
   };
@@ -17,7 +17,7 @@ const TodoList = ({todos,setTodos,filteredTodos,status,setStatus})=>{
           <hr/>
           {filteredTodos.map(todo => (
             <li key = {todo.id} >
-              <Todo todo={todo} todos={todos} setTodos={setTodos}/> 
+              <Todo todo={todo} todos={todos} setTodos={setTodos} status ={status} setFilteredTodos={setFilteredTodos}/> 
               <hr/>
             </li>
           ))}

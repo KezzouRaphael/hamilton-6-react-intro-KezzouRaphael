@@ -45,7 +45,7 @@ function App() {
       <hr/>
       <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText = {setInputText} setStatus={setStatus}/>
       <hr/>
-      <TodoList filteredTodos={filteredTodos} todos={todos} setTodos={setTodos} status={status} setStatus={setStatus}/> 
+      <TodoList filteredTodos={filteredTodos} setFilteredTodos={setFilteredTodos} todos={todos} setTodos={setTodos} status={status} setStatus={setStatus}/> 
     </div>
     </>
   );
